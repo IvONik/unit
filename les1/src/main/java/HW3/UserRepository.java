@@ -1,9 +1,5 @@
 package HW3;
 
-
-
-
-
 import java.util.ArrayList;
 import java.util.List;
 //Добавьте функцию в класс UserRepository, которая разлогинивает всех пользователей, кроме администраторов.

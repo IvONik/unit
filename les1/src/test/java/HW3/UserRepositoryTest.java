@@ -1,7 +1,5 @@
 package HW3;
 
-
-
 import org.junit.jupiter.api.Test;
 import java.util.ArrayList;
 import java.util.List;
@@ -15,7 +13,6 @@ class UserRepositoryTest {
         UserRepository repo = new UserRepository();
         User user = new User("Alex", "dfsf", true);
         List<User> data = new ArrayList<>();
-//        repo.addUser(user);
         data.add(user);
         assertEquals(1, data.size());
     }
@@ -38,6 +35,5 @@ class UserRepositoryTest {
         data.add(user3);
 
         assertEquals(1, repo.outAuth(data).size());
-
     }
 }

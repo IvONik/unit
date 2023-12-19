@@ -12,14 +12,14 @@ class MainTest {
     @Test
     void evenOddNumber() {
         Main main = new Main();
-        assertTrue(main.evenOddNumber(0));
-        assertFalse(main.evenOddNumber(7));
+        assertTrue(main.evenOddNumber(0),"Число должно быть четным");
+        assertFalse(main.evenOddNumber(7), "Число должно быть нечетным");
     }
 
     @Test
     void numberInInterval() {
         Main main = new Main();
-        assertTrue(main.numberInInterval(26));
-        assertFalse(main.numberInInterval(6));
+        assertTrue(main.numberInInterval(26), "число должно входить в интервал");
+        assertFalse(main.numberInInterval(5), "число не должно входить в интервал");
     }
 }
