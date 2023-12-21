@@ -11,6 +11,7 @@ class UserRepositoryTest {
     @Test
     void addUser() {
         UserRepository repo = new UserRepository();
+
         User user = new User("Alex", "dfsf", true);
         List<User> data = new ArrayList<>();
         data.add(user);
