@@ -19,10 +19,10 @@ class UserServiceTest {
         int userId = 1;
         String expectedUsername = "JohnDoe"; // Предположим, что у пользователя с ID 1 такое имя
 
+// устанавливаем, что userRepository.getUserById(userId) вернетnew User(userId, expectedUsername)
 // Устанавливаем ожидание вызова метода getUserById с userId и возвращаем ожидаемый объект User
         when(userRepository.getUserById(userId)).thenReturn(new User(userId, expectedUsername));
-        // вроде assertEquals (сравнивает ожидаемое значение(userRepository.getUserById(userId) и new User(userId, expectedUsername)
-
+        
 // Вызываем метод getUserUsernameById и проверяем, что результат соответствует ожиданиям
         String username = userService.getUserUsernameById(userId);
         assertEquals(expectedUsername, username);
