@@ -12,29 +12,21 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class ListServiceTest {
     @Test
-    public void getNumbers() {
-        List<Integer> numbers = Arrays.asList(1, 2, 3, 4);
-        ListClass listClass = new ListClass(numbers);
-        assertNotNull(numbers);
-        assertEquals(4, numbers.size());
-        assertEquals(1, numbers.get(0));
-        assertEquals(2, numbers.get(1));
-        assertEquals(3, numbers.get(2));
-        assertEquals(4, numbers.get(3));
-    }
-    @Test
     void generateRandomNumbers() {
         ListService listService = new ListService();
         List<Integer> numbers = listService.generateRandomNumbers(5, 0, 10);
+
         assertEquals(5, numbers.size());
         assertTrue(0 <= Collections.min(numbers));
         assertTrue(10 >= Collections.max(numbers));
     }
     @Test
     void calculateAverage(){
-        ListService listService = new ListService();
         List<Integer> numbers = new ArrayList<>(Arrays.asList(3, 2, 3, 4));
-        double average = listService.calculateAverage(numbers);
+        ListClass listClass = new ListClass(numbers);
+        listClass.setNumbers(numbers);
+        ListService listService = new ListService();
+        double average = listService.calculateAverage(listClass.getNumbers());
         assertTrue(0 < numbers.size() );
         assertEquals(3, average);
     }
